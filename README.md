@@ -1,8 +1,28 @@
-# Timed Todo list
+# ⏱ Timed Todo list
 
 Add your tasks, give yourself a time limit, and start being productive!
 
-## About
+## Contents
+
+1. [Link to website](#live-website)
+2. [How to set up](#set-up-project-locally)
+3. [Website walkthrough](#walkthrough)
+4. [Tech stack](#tech-stack)
+5. [Sidenote: mobile support / responsiveness](#sidenote)
+
+## Live website
+
+I hosted this project on Netlify --> https://timed-todo.netlify.app
+
+## Set up project locally
+
+1. Download the project code (.zip) and extract it into a project folder
+2. Open your terminal and navigate to the project folder
+3. Run `npm install`
+4. Run `npm run dev` to start a live development server
+5. Click the link outputted in the terminal. It should be http://localhost:5173/ (that's what mine was) - and voilá! it should be working 🤞
+
+## Walkthrough
 
 In this mini-web app you can create tasks by clicking the '+ NEW' button which opens a form, which has input validaiton
 ![Image showing task creation with validation](./readme%20assets/task-creation.PNG)
@@ -30,12 +50,10 @@ This project was made using React (via Vite and the `create vite@latest` command
 
 and yes, i did count: this project has around 1.4k lines of code 💥
 
-## How to set up
+## Sidenote
 
-1. Download the project code (.zip) and extract it into a project folder
-2. Open your terminal and navigate to the project folder
-3. Run `npm install`
-4. Run `npm run dev` to start a live development server
-5. Click the link outputted in the terminal. It should be http://localhost:5173/ (that's what mine was) - and voilá! it should be working 🤞
+I made this project to improve my React-Router and Typescript skills and so I haven't gone the extra mile to include responsive CSS in this one, using it on a reasonably sized monitor will do the trick - using it on a mobile screen won't be a nice experience
+
+I don't intend to make it responsive, first of all CSS is not my strong point and it would take alot of time - if anyone for whatever reason wants to waste their time making this responsive I'm all for it lol
 
 # Thanks for reading 😃
