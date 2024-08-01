@@ -18,7 +18,8 @@ export default function SidePanel({ tasksArray }: SidePanelProps) {
 
 function Top() {
   const navigator = useNavigate();
-  function handleClick() {
+
+  function handleAddNewTask() {
     navigator('/new-task');
   }
 
@@ -29,7 +30,7 @@ function Top() {
           Your Tasks
         </Link>
       </h1>
-      <button onClick={handleClick}>+ New</button>
+      <button onClick={handleAddNewTask}>+ New</button>
     </div>
   );
 }
