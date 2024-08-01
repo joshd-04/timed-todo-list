@@ -74,6 +74,7 @@ export default function NewTaskForm() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            className="title-input"
           />
         </span>
         <span>

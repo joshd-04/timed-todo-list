@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ITask from '../util/taskInterface';
 import { SidebarContext } from '../util/sidebarContext';
 import { themeHandler } from '../util/themeHandler';
+import MobileWarning from '../components/MobileWarning';
 
 export type OutletContextType = {
   tasksArray: ITask[];
@@ -19,6 +20,7 @@ export default function Root() {
   const [readyToStartChangingTheme, setReadyToStartChangingTheme] =
     useState(false);
   const [theme, setTheme] = useState<Theme>('dark');
+  const [firstTenSeconds, setFirstTenSeconds] = useState(true);
 
   // on mount (loading / getting from local storage)
   useEffect(() => {
@@ -63,6 +65,17 @@ export default function Root() {
   useEffect(() => {
     themeHandler(theme, readyToStartChangingTheme);
   }, [theme, readyToStartChangingTheme]);
+
+  // mobile warning countdown handling
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setFirstTenSeconds(false);
+    }, 10_000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   function addTask(task: ITask) {
     setTasksArray([...tasksArray, task]);
@@ -123,6 +136,7 @@ export default function Root() {
           </svg>
         )}
       </button>
+      {firstTenSeconds && <MobileWarning />}
     </>
   );
 }

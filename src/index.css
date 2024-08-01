@@ -228,6 +228,15 @@ form p {
   font-weight: 500;
 }
 
+form .title-input {
+  width: 80%;
+  max-width: 400px;
+}
+
+form textarea {
+  width: 100%;
+}
+
 form span,
 form textarea,
 form input {
@@ -447,4 +456,44 @@ button:hover {
 .light-mode:hover {
   opacity: 1;
   filter: brightness(0.8);
+}
+
+.mobile-warning {
+  /* display: none; */
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: red;
+  width: 100vw;
+  height: 10vh;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1050px) {
+  .mobile-warning {
+    /* display: none; */
+    opacity: 1;
+    position: fixed;
+    z-index: 1;
+    background-color: red;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+  }
 }
