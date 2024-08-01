@@ -45,7 +45,6 @@ export default function Root() {
       (themeFromLS === 'light' || themeFromLS === 'dark')
     ) {
       setTheme(themeFromLS);
-      console.log('fetched theme', themeFromLS);
     }
 
     setTimeout(() => {
